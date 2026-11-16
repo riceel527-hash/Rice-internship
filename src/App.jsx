@@ -7,17 +7,16 @@ import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
-// Import AOS library and CSS
+//
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  // Initialize AOS when the app loads
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 0, // Tells AOS to trigger hero elements immediately on load
+      offset: 0,  
     });
   }, []);
 

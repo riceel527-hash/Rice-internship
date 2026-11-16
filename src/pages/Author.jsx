@@ -6,7 +6,7 @@ import AuthorItems from "../components/author/AuthorItems";
 import AuthorImage from "../images/author_thumbnail.jpg";
 
 const Author = () => {
-  const { authorId } = useParams(); // Capture the author ID from the URL route
+  const { authorId } = useParams(); // author ID from the URL
   const [authorData, setAuthorData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isFollowing, setIsFollowing] = useState(false);
@@ -64,7 +64,7 @@ const Author = () => {
             <div className="row">
               <div className="col-md-12">
                 {loading ? (
-                  /* SKELETON LOADING STATE FOR PROFILE HEADER */
+                  /* SKELETON LOADING STATE  */
                   <div className="d_profile de-flex">
                     <div className="de-flex-col">
                       <div className="profile_avatar">
@@ -101,7 +101,7 @@ const Author = () => {
                     </div>
                   </div>
                 ) : (
-                  /* LIVE AUTHOR PROFILE DATA */
+                  /* AUTHOR PROFILE DATA */
                   <div className="d_profile de-flex">
                     <div className="de-flex-col">
                       <div className="profile_avatar">
@@ -150,7 +150,7 @@ const Author = () => {
 
               <div className="col-md-12">
                 <div className="de_tab tab_simple">
-                  {/* Pass authorData and loading directly so AuthorItems has the nftCollection and authorImage */}
+                  {/*  authorData and  AuthorItems has the nftCollection and authorImage */}
                   <AuthorItems authorData={authorData} loading={loading} />
                 </div>
               </div>

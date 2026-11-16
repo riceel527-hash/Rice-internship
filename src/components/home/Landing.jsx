@@ -18,7 +18,7 @@ const Landing = () => {
             <div className="col-md-6">
               <div className="spacer-single"></div>
 
-              {/* Animation moved to the h6 tag, changed to fade-right with longer duration */}
+              {/* Animation  */}
               <h6
                 data-aos="fade-right"
                 data-aos-delay="150"
@@ -65,7 +65,7 @@ const Landing = () => {
               <div className="mb-sm-30"></div>
             </div>
 
-            {/* Swapped to a bold zoom-in effect for the main image */}
+            {/* Swap zoom main image */}
             <div
               className="col-md-6 xs-hide"
               data-aos="zoom-in"

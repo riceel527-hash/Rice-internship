@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 
-// Slick carousel styles
+// Carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 
-// Custom Left Arrow Component
+//Left Arrow
 const PrevArrow = ({ onClick }) => (
   <button
     className="slick-arrow slick-prev custom-arrow"
@@ -21,7 +21,7 @@ const PrevArrow = ({ onClick }) => (
   </button>
 );
 
-// Custom Right Arrow Component
+// Right Arro
 const NextArrow = ({ onClick }) => (
   <button
     className="slick-arrow slick-next custom-arrow"
@@ -32,7 +32,7 @@ const NextArrow = ({ onClick }) => (
   </button>
 );
 
-// Reusable Countdown Timer Component using requestAnimationFrame
+//Countdown Timer using requestAnimationFrame
 const CountdownTimer = ({ expiryDate }) => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
@@ -104,12 +104,12 @@ const NewItems = () => {
     fetchNewItems();
   }, []);
 
-  // Carousel Configuration
+  // Carousel
   const settings = {
     dots: false,
-    infinite: true, // Continuous loop
+    infinite: true, // loop
     speed: 500,
-    slidesToShow: 4, // 4 cards at a time on desktop
+    slidesToShow: 4, // 4 cards
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -127,9 +127,9 @@ const NewItems = () => {
         },
       },
       {
-        breakpoint: 480, // Mobile view
+        breakpoint: 480, // Mobile
         settings: {
-          slidesToShow: 1, // Single card view for mobile phone size
+          slidesToShow: 1, // Single card view
         },
       },
     ],
@@ -220,7 +220,7 @@ const NewItems = () => {
                         </Link>
                       </div>
 
-                      {/* Countdown Timer powered by requestAnimationFrame */}
+                      {/* Countdown Timer requestAnimationFrame */}
                       <CountdownTimer expiryDate={item.expiryDate} />
 
                       <div className="nft__item_wrap">
